@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>test</title>
+        <script src="kusoemoji.js"></script>
+        <script>
+            window.onload = function(){
+                document.getElementById("moji").addEventListener("change",function(){
+                    var targetElem = document.getElementById("canvas");
+                    targetElem.innerHTML = "";
+                    var ks = new kusoemoji(this.value,32);
+                    ks.appendTo(targetElem);
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <input id="moji" type="text" />
+        <div id="canvas">
+        </div>
+    </body>
+</html>
